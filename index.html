@@ -51,30 +51,51 @@
             <li><a href="#">links</a></li>
         </ul>
     </nav>
+    <!-- Form -->
     <section>
         <h1>Conference Registration Form</h1>
         <p>Required Item (*)</p>
         <form action="http://www.example.com/cg/register" method="POST">
-            <label for="custTitle">Title</label>
-            <input type="text">
-            <label for="custFirst">First Name*</label>
-            <input type="text" required />
-            <label for="custLast">Last Name*</label>
-            <input type="text" required />
-            <label for="custAddress">Address*</label>
-            <textarea name="address" id="address" cols="30" rows="10" required></textarea>
-            <label for="custOrganization">Company or University</label>
-            <input type="text" />
-            <label for="custEmail">E-mail*</label>
-            <input type="email" required />
-            <label for="custPhone">Phone Number*</label>
-            <input type="tel" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
-            <label for="custAcgip">ACGIP Membership Number</label>
-            <input type="text" />
-            <label for="custRegister">Registration Category</label>
-            <input type="text" />
+            <label for="titleBox">Title</label>
+            <input type="text" name="title" id="titleBox" list="titleList" />
+            <datalist id="titleList">
+                <option value="Mr.">(Mister)</option>
+                <option value="Mrs.">(Mistress)</option>
+                <option value="Ms.">(Miss)</option>
+                <option value="Prof.">(Professor</option>
+                <option value="Dr.">(Doctor)</option>
+                <option value="Assist. Prof.">(Assistant Professor)</option>
+                <option value="Assoc. Prof.">(Associate Professor)</option>
+            </datalist>
+            <label for="fnBox">First Name*</label>
+            <input type="text" name="firstName" id="fnBox" required />
+            <label for="lnBox">Last Name*</label>
+            <input type="text" name="lastName" id="lnBox" required />
+            <label for="addBox">Address*</label>
+            <textarea name="address" id="addBox" cols="30" rows="10" required></textarea>
+            <label for="groupBox">Company or University</label>
+            <input type="text" name="group" id="groupBox" />
+            <label for="mailBox">E-mail*</label>
+            <input type="email" name="email" id="mailBox" required />
+            <label for="phoneBox">Phone Number*</label>
+            <input type="tel" name="phoneNumber" id="phoneBox" required placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+            <label for="idBox">ACGIP Membership Number</label>
+            <input type="text" name="acgipID" id="idBox" placeholder="acgip-nnnnnn" pattern="^acgip\-\d{6}$" />
+            <label for="registerType" list="regList">Registration Category</label>
+            <select name="registerType" id="regList">
+                <option value="member">ACGIP Member ($695)</option>
+                <option value="nonmember">Non-Member ($795)</option>
+                <option value="student">Student ($310)</option>
+                <option value="poster">Poster ($95)</option>
+                <option value="guest">Guest ($35)</option>
+            </select>
+            <p>
+                <input type="submit" value="continue">
+            </p>
         </form>
     </section>
+    <!-- The above piece of code constructs a web form for the document, allowing you to submit information that details the following: your title, your first name, your last name, your address, your company/university, your email, your phone number, your ACGIP membership number, as well as selecting which option fits you best in the Registration Category. -->
+    <!-- End Form -->
 
     <aside>
         <dl>

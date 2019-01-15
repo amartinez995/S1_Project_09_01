@@ -13,3 +13,53 @@
 
 
 /* Validation Styles */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgb(245, 245, 140);
+    -moz-background-color: rgb(245, 245, 140);
+    -ms-background-color: rgb(245, 245, 140);
+    -webkit-background-color: rgb(245, 245, 140);
+}
+
+/*
+==================================================
+The above piece of code modifies the background colors of all input, select, and textarea elements to yellow while said elements are focused upon; as well as adding cross-browser extension so that the code will function properly with the following browsers: Safari, Chrome, Microsoft Edge, Internet Explorer, Mozilla Firefox.
+==================================================
+*/
+
+input#fnBox:focus:valid,
+input#lnBox:focus:valid,
+textarea#addBox:focus:valid,
+input#mailBox:focus:valid,
+input#phoneBox:focus:valid,
+input#idBox:focus:valid {
+    background: rgb(220, 255, 220) url(cg_valid.png) right/contain no-repeat;
+    -moz-background: rgb(220, 255, 220) url(cg_valid.png) right/contain no-repeat;
+    -ms-background: rgb(220, 255, 220) url(cg_valid.png) right/contain no-repeat;
+    -webkit-background: rgb(220, 255, 220) url(cg_valid.png) right/contain no-repeat;
+}
+
+/*
+==================================================
+The above piece of code modifies the background colors and images of all input and textarea elements with the following ids: fnBox, lnBox, addBox, mailBox, phoneBox, idBox; so that the background turns green/adds a "VALID" image when said elements are focused upon, and are filled with valid data; as well as adding cross-browser extension so that the code will function properly with the following browsers: Safari, Chrome, Microsoft Edge, Internet Explorer, Mozilla Firefox.
+==================================================
+*/
+
+input#fnBox:focus:invalid,
+input#lnBox:focus:invalid,
+textarea#addBox:focus:invalid,
+input#mailBox:focus:invalid,
+input#phoneBox:focus:invalid,
+input#idBox:focus:invalid {
+    background: rgb(255, 232, 232) url(cg_invalid.png) right/contain no-repeat;
+    -moz-background: rgb(255, 232, 232) url(cg_invalid.png) right/contain no-repeat;
+    -ms-background: rgb(255, 232, 232) url(cg_invalid.png) right/contain no-repeat;
+    -webkit-background: rgb(255, 232, 232) url(cg_invalid.png) right/contain no-repeat;
+}
+
+/*
+==================================================
+The above piece of code modifies the background colors and images of all input and textarea elements with the following ids: fnBox, lnBox, addBox, mailBox, phoneBox, idBox; so that the background turns red/adds an "INVALID" image when said elements are focused upon, and are filled with invalid data; as well as adding cross-browser extension so that the code will function properly with the following browsers: Safari, Chrome, Microsoft Edge, Internet Explorer, Mozilla Firefox.
+==================================================
+*/
